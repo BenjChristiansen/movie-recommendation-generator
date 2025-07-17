@@ -26,3 +26,4 @@ description: "A documentary through a series of intimate sessions with psychics 
   document.getElementById("generate-button").addEventListener("click", function() {
     const randomMovie = getRandomMovie(movies);
     document.getElementById("movie-output").textContent = `${randomMovie.title} - ${randomMovie.genre}: ${randomMovie.description}`;
+  });
