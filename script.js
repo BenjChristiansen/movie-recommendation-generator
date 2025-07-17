@@ -18,9 +18,11 @@ description: "Young Dorothy Gale and her dog Toto are swept away by a tornado fr
   { title: "Look Into My Eyes", 
 genre: "Documentary",
 description: "A documentary through a series of intimate sessions with psychics and their clients."
-}
+}]
   function getRandomMovie(movies){
   const randomIndex = Math.floor(Math.random() * movies.length);
   return movies[randomIndex];
   }
-  
+  document.getElementById("generate-button").addEventListener("click", function() {
+    const randomMovie = getRandomMovie(movies);
+    document.getElementById("movie-output").textContent = `${randomMovie.title} - ${randomMovie.genre}: ${randomMovie.description}`;
